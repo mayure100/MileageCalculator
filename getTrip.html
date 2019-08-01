@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Get Trip</title>
+    
+</head>
+    <link rel="stylesheet" href="index.css">
+<style>
+#previousKmReading{
+    margin: 0 auto;
+
+}
+
+
+</style>
+</head>
+
+<body onload="getAllVehicles();">
+
+    <header id="header" style="margin-left: 20px;">
+        <h1>Mileage Calculator</h1>
+    </header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <a href="#" class="navbar-brand">Mileage Calculator</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="navbar-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="register.html" class="nav-link">Register Vehicle</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="addTrip.html" class="nav-link">Add Trip</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="getTrip.html" class="nav-link">Get Trip</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="analysis.html" class="nav-link">Analysis</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <br>
+    <h1 style="margin-left: 10px; text-align: center;  ">Get trips for vehicle</h1>
+    <div class="row">
+        <div class="tripoption">
+            <select style="margin: 0"   id="vehicles" name="vtype" onchange="chooseVehicle();">
+
+                <option   disabled selected value>Please select</option>
+
+            </select>
+
+        </div>
+    </div>
+    <br>
+    <div>
+    KM:<div id="previousKmReading"></div>
+    <br>
+</div>
+    <table class="table table-dark" id="vehicleTrips">
+
+            <tr>
+                     <th scope="col">S.no</th>
+                     <th scope="col">Trip Date</th>
+                     <th scope="col">Km Reading</th>
+                     <th scope="col">Kms In Trip</th>
+                     <th scope="col">Average</th>
+                     <th scope="col">Rs/Km</th>
+                     <th scope="col">Delete</th>
+            </tr>
+
+
+
+    </table>
+
+    <div id="errorMessasge"></div>
+
+
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+<script src="index.js"></script>
+
+
+
+</body>
+
+</html>
